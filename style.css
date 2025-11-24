@@ -1,0 +1,226 @@
+html{
+    height: 100%;
+    width: 100%
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.spacer {
+    margin-top: 30px;
+}
+
+.thepage {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: tan;
+}
+
+.theheader{
+    height: 40px;
+    border-bottom: solid 1px black;
+}
+
+.therest {
+    display: flex;
+    height: 100%;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    background-color: rgb(40, 153, 173);
+    z-index: 1;
+
+}
+
+.theleft {
+    flex: 3;
+    height: 100%;
+    border-right: black 1px solid;
+}
+
+.theright {
+    flex: 7;
+}
+
+.combo{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+    width: 200px;
+    border-radius: 0%;
+    padding: 3px;
+    background-color: white;
+    font-size: 18px;
+}
+
+.combo-box{
+    position: relative;
+    z-index: 1;
+    margin-left: 10px;
+    border: 1px solid gray;
+    width: 200px;
+    padding: 3px;
+    background-color: white;
+}
+
+.section-list-item{
+    font-size: 18px;
+    padding: 3px;
+}
+
+.section-list-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.page-list {
+    position: absolute;
+    z-index: 0;
+    top: 70px;
+    left: 0;
+    margin-top: 10px;
+}
+
+.page-list-item {
+    color: darkblue;
+    font-size: 18px;
+    margin-left: 20px;
+    padding: 3px;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 5px;
+}
+
+.leftbox {
+    flex: 1;
+}
+
+
+.rightbox {
+    flex: 1;
+}
+
+.greyed{
+    color: grey;
+}
+
+
+.navright:hover{
+    cursor: pointer;
+}
+
+.navleft:hover{
+    cursor: pointer;
+}
+
+.page-title {
+    flex: 1;
+    color: darkblue;
+    font-size: 30px;
+    text-align: center;
+    padding: 3px;
+}
+
+.block-title {
+    color: rgb(48, 104, 122);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.block-title-holder {
+    display: flex;
+    padding-right: 5px;
+}
+
+.block-detail {
+    font-size: 17px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.page-list-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hide{
+    display: none;
+}
+
+.login-box{
+    padding-top: 40px;
+    padding: 20px;
+    border: solid 1px black;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    width: 300px;
+    height: 175px;
+    background-color: white;
+    display: none;
+    z-index: 2;
+}
+
+.login-icon {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    cursor: pointer;
+}
+
+.login-button {
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+.login-button:hover{
+    cursor: pointer;
+}
+
+.inputs {
+    display: inline-block;
+    right: 40px;
+    width: 180px;
+    align-self: right;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+label {
+    width: 70px;
+    display: inline-block;
+    text-align: right;
+}
+
+.delete-block {
+    padding: 20px;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border: solid 2px;
+    display: none;
+}
+
+.button-holder {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
