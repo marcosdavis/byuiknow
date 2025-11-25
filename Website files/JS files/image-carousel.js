@@ -1,24 +1,29 @@
 carouselArray = [
   {
-    id: "1",
+    "id": "1",
+    "src": "images/placeholder.png"
   },
   {
-    id: "2",
+    "id": "2",
+    "src": "images/placeholder.png"
   },
   {
-    id: "3",
+    "id": "3",
+    "src": "images/placeholder.png"
   },
 ];
 
 // set up variables to reference different elements on the page
 const carouselContainer = document.getElementsByClassName("carosuel-container");
+const backBtn = document.getElementById("back-btn");
+const nextBtn = document.getElementById("next-btn");
 
-document.addEventListener("back-btn", (e) => {
-  // e.preventDefault();
+backBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   back();
 });
 
-document.addEventListener("next-btn", (e) => {
+nextBtn.addEventListener("click", (e) => {
   e.preventDefault();
   next();
 });
@@ -27,7 +32,17 @@ async function back() {
   // Remove last element and place it in the from of the array
   carouselArray.unshift(carouselArray.pop());
 
-  console.log(carouselArray);
+  carouselArray.forEach(element => {
+    if (element["id"] === "1") {
+      console.log("ichi");
+    } else if (element["id"] === "2") {
+      console.log("ni");
+    } else {
+      console.log("san");
+    }
+    console.log(element["id"]);
+  });
+  
 
 //   //
 //   carouselArray.forEach((index) => {
@@ -35,4 +50,9 @@ async function back() {
 //   });
 };
 
-// function next() {}
+function next() {
+  // Remove first item of array and put it at the end
+  carouselArray.push(carouselArray.shift());
+
+  console.log(carouselArray);
+}
