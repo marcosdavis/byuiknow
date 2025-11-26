@@ -59,7 +59,7 @@
 
     </style>
     <link rel="stylesheet" href="styles/style.css">
-    <script defer src="JS files/image-carousel.js"></script>
+    <script defer src="JS files/post-carousel.js"></script>
 </head>
 <body>
     <header>
@@ -77,17 +77,34 @@
     <main>
         <section class="hero">
             <div class="carousel">
-                <div class="carousel-container">
-                    <img src="images/placeholder.png" id="item-1" data-index="3">
-                    <img src="images/placeholder.png" id="item-2" data-index="3">
-                    <img src="images/placeholder.png" id="item-3" data-index="3">
+                <div id="back-container">
+                    <button id="back-btn"><</button>
                 </div>
-                <div class="controls">
-                    <button id="back-btn" data-name="back"><-</button>
-                    <button id="next-btn" data-name="next">-></button>
+                <h1>Trending Now</h1>
+                <div id="carousel-container">
+                    <div id="post-1" class="posts">
+                        <h2>Post title1</h2>
+                        <p>post content</p>
+                    </div>
+                    <div id="post-2" class="posts">
+                        <h2>Post title2</h2>
+                        <p>post content</p>
+                    </div>
+                    <div id="post-3" class="posts">
+                        <h2>Post title3</h2>
+                        <p>post content</p>
+                    </div>
+                </div>
+                <div id="next-container">
+                    <button id="next-btn">></button>
                 </div>
             </div>
-            <input type="text" placeholder="Input a topic or name of post">
+            <div>
+                <input type="text" placeholder="Input a topic or name of post"> 
+            </div>
+            <div>
+                <button id="create-post-btn">Make your post!</button>
+            </div>
         </section>
         
     </main>
