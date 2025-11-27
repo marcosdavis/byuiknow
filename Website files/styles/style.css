@@ -3,10 +3,13 @@ body {
     padding: 0;
 }
 
+.hero {
+    background-color: gray;
+}
+
 .carousel {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    background-color: gray;
 }
 
 #carousel-container {
@@ -72,4 +75,32 @@ body {
 #back-btn:hover, #next-btn:hover {
     cursor: pointer;
     font: bold;
+}
+
+#search-post-input {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+}
+
+#search-post-input input {
+    height: 30px;
+    border: none;
+}
+
+#search-icon {
+    margin: 0;
+    justify-self: center;
+}
+
+#create-post-btn {
+    justify-self: center;
+    margin: 30px;
+}
+
+#create-post-btn button {
+    font-size: 25px;
+    border-radius: 25px;
+    padding: 10px;
 }
