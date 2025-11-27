@@ -1,7 +1,8 @@
 // set up variables to reference different elements on the page
-const carouselContainer = document.getElementById("carousel-container");
 const backBtn = document.getElementById("back-btn");
 const nextBtn = document.getElementById("next-btn");
+const postArray = Array.from(document.querySelectorAll(".posts"));
+const position = ["post-1", "post-2", "post-3"];
 
 // Get the top 3 trending posts
 // const trendingPosts = fetch("api/trending.php")
@@ -10,29 +11,42 @@ const nextBtn = document.getElementById("next-btn");
 
 // console.log(trendingPosts)
 
-backBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  carouselContainer.append(carouselContainer.firstElementChild);
-  highlightedPost();
+// Test posts
+carouselPosts = [
+  {
+    'id': '1',
+    'title': 'Post title1',
+    'description': 'post content'
+  },
+  {
+    'id': '2',
+    'title': 'Post title2',
+    'description': 'post content'
+  },
+  {
+    'id': '3',
+    'title': 'Post title3',
+    'description': 'post content'
+  },
+];
+
+// When the back button is pressed. move the left post to the right side of the center post
+backBtn.addEventListener("click", () => {
+  postArray.unshift(postArray.pop());
+  updateClasses();
 });
 
-nextBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  // Remove last  item of array and put it at the start
-  carouselContainer.insertBefore(carouselContainer.lastElementChild, carouselContainer.firstElementChild);
-  highlightedPost();
+// When the next button is pressed. move the right post to the left side of the center post
+nextBtn.addEventListener("click", () => {
+  postArray.push(postArray.shift());
+  updateClasses();
 });
 
-function highlightedPost() {
-  // Make smaller the left side post
-  carouselContainer.firstElementChild.style.height = "175px";
-  carouselContainer.firstElementChild.style.width = "175px";
-  
-  // Make larger the center post
-  carouselContainer.children[1].style.height = "250px";
-  carouselContainer.children[1].style.width = "250px";
-
-  // Make smaller the right side post
-  carouselContainer.lastElementChild.style.height = "175px";
-  carouselContainer.lastElementChild.style.width = "175px";
+// Update the class names for the new orientation of the posts so that the css can update them.
+function updateClasses() {
+  postArray.forEach((post, i) => {
+    post.className = "posts " + position[i];
+  })
 }
+
+
