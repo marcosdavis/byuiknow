@@ -4,77 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: rgb(196, 191, 191);
+
+  }
+
+  header {
+    height:75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 10px 20px;
+    
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    top: 10px;
+    width:70%;
+    height: 65px;
+    position: relative;
+    border-radius:100px;
+}
+
+header p {
+  margin: 0;          
+  position: relative;
+  top: -35px;
+  left: 120px;
+}
+
+nav {
+    font-size: 20px;       
+    font-weight: bold;
+    
+}
+nav a {
+    color: rgb(0, 0, 0);
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+  font-size: 20px; /* adjust size */
+  margin-left: 10px; /* spacing from "Setting" */
+  cursor: pointer;
+}
+
+.search-bar{
+    width: 1200px;          
+    height: 35px;          
+    position: relative;
+    left:125px;
+    top:20px;
+    padding: 0 10px;       
+    border: 1px solid #ccc; 
+    border-radius: 8px;    
+    font-size: 16px;
+}
+
+.bar {
+  margin: 0 8px;        
+  font-weight: bold;    
+  position: relative;   
+  top: 0px;             
+  left: 0px;            
+}
+
+
+#multi-select{
+  width: 100px;
+  position:relative;
+  top:60px;
+  right:70%;
+  border-radius: 5px;
+}
+
+input{
+  position:relative;
+  top:60px;
+  right:70%;
+  border-radius: 5px;
+}
+  .post-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-top:100px;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+.post-section div {
+    width:50%;
+    border: 1px solid #ccc;
+    padding: 0px;
+    background: #f9f9f9;
+    margin:0 auto;
+    min-height: 300px; 
+}
+
+.post-section img {
+    width: 100%;
+    height: 180px; 
+    background-color: #ddd; 
+    object-fit: cover; 
+    border-radius: 6px;
+    display: block;
+    margin-top: 15px;
+
+  
+}
+
+.box1 {
+    position: relative; 
+    left: 100px;
+}
+
+.box3{
+  position: relative; 
+  right: 100px;
+}
+
+.box6{
+  position: relative; 
+  right: 100px;
+}
+
+.box4 {
+    position: relative; 
+    left: 100px;
+}
+
+
+.description {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    left:10px;
+}
+
+.post-section span {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+footer{
+  top:100px;
+  background-color: #ffffff;
+  position:relative;
+  text-align: center;
+  height: 50px;
+}
+
+footer p{
+  padding-top:15px;
+}
+  
+</style>
 </head>
 <body>
-        <div id="content">
+        
         <header>
+          <div>
             <a id="logo_link" href="">
-                <img class="logo" src="" alt="">BYUI-KNOW
+                <img class="logo" src="blank.png" alt="blank image">
             </a>
+              <p>BYUI-KNOW</p>
+          </div>
             <nav>
-              <a href="Home.html">Home</a>
-              <a href="Post.html">Posts</a>
-              <a href="Trending.html">Trending</a>
-              <a href="Setting.html">Setting</a>
+             
+              <a href="Home.html">Home</a><span class="bar">|</span>
+              <a href="Post.html">Posts</a><span class="bar">|</span>
+              <a href="Trending.html">Trending</a><span class="bar">|</span>
+              <a href="Setting.html">Setting</a><span class="menu">&#9776;</span>
             </nav>
         </header>
 
         <main>
-            <label class="search-bar" >Seacrh BYUI-KNOW</label>
-            <input type="text" placeholder="Seacrh BYUI-KNOW">
-            <div>
+
+            <input class="search-bar" type="text" placeholder="Seacrh BYUI-KNOW">
+            
+        <select id="multi-select">
+            <option value="">filter by tag</option><span class="bar">|</span>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+            <input type="text" placeholder="sort newest">
+            <section class="post-section">
                 <div class="box1">
-                  <img src="" alt="">
-                    <h4>Title</h4>
-                    <h4>Sub head</h4>
-                    <p>How to use a printer</p>
+                  <h4>Title</h4>
+                  <p>Sub Head</p>
+                  <img src="blank.png" alt="">
+                  <p class="description">How to use a printer</p>
+                  <span>#Printer</span>
+                  <span>SHARE</span>
                 </div>
+
                 <div class="box2">
-                  <img src="image" alt="image">
-                    <h4>Title</h4>
-                    <h4>Subhead</h4>
-                    <p>How to use </p>
+                  <h4>Title</h4>
+                  <p>Sub Head</p>
+                  <img src="blank.png" alt="image">
+                  <p class="description">How to use a printer</p>
+                  <span>#Printer</span>
+                  <span>SHARE</span>
                 </div>
+
+
                 <div class="box3">
-                  <img src="image" alt="image">
-                    <h4>Title</h4>
-                    <h4>Sub head</h4>
+                  <h4>Title</h4>
+                  <p>Sub Head</p>
+                  <img src="blank.png" alt="image">
+                  <p class="description">How to use a printer</p>
+                  <span>#Printer</span>
+                  <span>SHARE</span>
                 </div>
+                
                 <div class="box4">
-                  <img src="image" alt="image">
-                    <h4>Title</h4>
-                    <h4>Sub head</h4>
-                    <p>How to use </p>
+                  <h4>Title</h4>
+                  <p>Sub Head</p>
+                  <img src="blank.png" alt="image">
+                  <p class="description">How to use a printer</p>
+                  <span>#Printer</span>
+                  <span>SHARE</span>
                 </div>
+
                 <div class="box5">
-                  <img src="image" alt="image">
-                    <h4>Title</h4>
-                    <h4>Sub head</h4>
-                    <p>How to use </p>
+                  <h4>Title</h4>
+                  <p>Sub Head</p>
+                  <img src="blank.png" alt="image">
+                  <p class="description">How to use a printer</p>
+                  <span>#Printer</span>
+                  <span>SHARE</span>
                 </div>
+
                 <div class="box6">
-                  <img src="image" alt="image">
-                    <h4>Title</h4>
-                    <h4>Sub head</h4>
-                    <p>How to use </p>
+                  <h4>Title</h4>
+                  <p>Sub Head</p>
+                  <img src="blank.png" alt="image">
+                  <p class="description">How to use a printer</p>
+                  <span class="tag">#Printer</span>
+                  <span class="tag">SHARE</span>
                 </div>
-            </div>
+
+            </section>
         </main>
         <footer>
       <p> &copy; Copyright@BYUI-KNOW</p>
-      
-      <div class="social">
-        <a href="https://facebook.com" target="_blank">
-          <img src="images/facebook.png" alt="Facebook icon">
-        </a>
-        <a href="https://twitter.com" target="_blank">
-          <img src="images/twitter.png" alt="Twitter icon">
-        </a>
-        <a href="https://instagram.com" target="_blank">
-          <img src="images/instagram.svg" alt="Instagram icon">
-        </a>
-      </div>
-    </footer>
+        </footer>
 </body>
 </html>
