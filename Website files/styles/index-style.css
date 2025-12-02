@@ -153,10 +153,6 @@ ul li:last-child {
   border-top-left-radius: 10px;
 }
 
-#search-post-input ::placeholder{
-  color: #94aec2e1;
-}
-
 #search-post-input button {
   height: 50px;
   padding-right: 25px;
