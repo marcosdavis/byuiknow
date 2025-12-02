@@ -136,9 +136,9 @@ ul li:last-child {
 }
 
 #search-post-input {
+  text-align: center;
   display: flex;
-  justify-self: center;
-  align-self: center;
+  justify-content: center;
 }
 
 #search-post-input input {
@@ -168,7 +168,8 @@ ul li:last-child {
 }
 
 #create-post-btn {
-  justify-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 #create-post-btn button {
