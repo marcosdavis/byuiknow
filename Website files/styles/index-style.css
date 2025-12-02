@@ -218,3 +218,15 @@ ul li:last-child {
   padding-left: 15px;
   color: gray;
 }
+
+footer{
+  top:100px;
+  background-color: #ffffff;
+  position:relative;
+  text-align: center;
+  height: 50px;
+}
+
+footer p{
+  padding-top:15px;
+}
