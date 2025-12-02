@@ -15,9 +15,10 @@ nav {
 }
 
 img[id="navlogo"] {
-  width: 100px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   margin-left: 50px;
+  border-radius: 100%;
 }
 
 p[id="title"] {
