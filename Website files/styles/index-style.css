@@ -83,6 +83,7 @@ ul li:last-child {
   transform: translate(-50%, -50%);
   background-color: lightgray;
   transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.671);
 }
 
 .post-1 {
@@ -153,6 +154,10 @@ ul li:last-child {
   border-top-left-radius: 10px;
 }
 
+#search-post-input ::placeholder{
+  color: #94aec2e1;
+}
+
 #search-post-input button {
   height: 50px;
   padding-right: 25px;
@@ -172,12 +177,18 @@ ul li:last-child {
 }
 
 #create-post-btn button {
+  transition: 0.3s;
   font-size: 22px;
   border-radius: 25px;
   padding: 15px 30px 15px 30px;
   margin: 30px;
   color: white;
   background-color: blue;
+}
+
+#create-post-btn :hover{
+  background-color: rgb(0, 0, 193);
+  transition: 0.3s;
 }
 
 .recent-questions {
