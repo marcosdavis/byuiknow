@@ -1,161 +1,220 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #d6d6d6;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+img[id="navlogo"] {
+  width: 100px;
+  height: 70px;
+  margin-left: 50px;
+}
+
+p[id="title"] {
+  font-size: 30px;
+  margin-left: 64px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  border-right: 1px solid black;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li:first-child {
+  padding-left: 0;
+}
+
+ul li:last-child {
+  border-right: none;
+  padding-right: 0;
 }
 
 .hero {
-    background-color: gray;
+  background-color: gray;
+}
+
+.hero h1 {
+    text-align: center;
+    margin: 0;
+    padding-top: 2em;
 }
 
 .carousel {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
 }
 
 #carousel-container {
-    position: relative;
-    grid-column: 2/3;
-    width: 100%;
-    height: 29.5em;
-    background-color: gray;
+  position: relative;
+  grid-column: 2/3;
+  width: 100%;
+  height: 20em;
+  background-color: gray;
 }
 
 .posts {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    justify-items: center;
-    transform: translate(-50%, -50%);
-    background-color: lightgray;
-    transition: all 0.4s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  justify-items: center;
+  transform: translate(-50%, -50%);
+  background-color: lightgray;
+  transition: all 0.4s ease-in-out;
 }
 
 .post-1 {
-    width: 175px;
-    height: 175px;
-    left: 20%;
-    transform: translate(-50%, -50%) scale(1);
+  width: 175px;
+  height: 175px;
+  left: 20%;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .post-2 {
-    width: 250px;
-    height: 250px;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.1);
-    z-index: 1;
-} 
-
-.post-3 {
-    width: 175px;
-    height: 175px;
-    left: 80%;
-    transform: translate(-50%, -50%) scale(1);
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+  z-index: 1;
 }
 
+.post-3 {
+  width: 175px;
+  height: 175px;
+  left: 80%;
+  transform: translate(-50%, -50%) scale(1);
+}
 
 #back-container {
-    grid-column: 1/2;
+  grid-column: 1/2;
 }
 
 #next-container {
-    grid-column: 3/4;
+  grid-column: 3/4;
 }
 
-#back-container, #next-container {
-    justify-self: center;
-    align-self: center;
+#back-container,
+#next-container {
+  justify-self: center;
+  align-self: center;
 }
 
-#back-btn, #next-btn {
-    background: none;
-    border: none;
-    font-size: 3em;
+#back-btn,
+#next-btn {
+  background: none;
+  border: none;
+  font-size: 3em;
 }
 
-#back-btn:hover, #next-btn:hover, #create-post-btn button:hover, #search-post-input button:hover {
-    cursor: pointer;
+#back-btn:hover,
+#next-btn:hover,
+#create-post-btn button:hover,
+#search-post-input button:hover {
+  cursor: pointer;
 }
 
 #search-post-input {
-    display: flex;
-    justify-self: center;
-    align-self: center;
+  display: flex;
+  justify-self: center;
+  align-self: center;
 }
 
 #search-post-input input {
-    height: 48px;
-    padding-right: 75px;
-    padding-left: 100px;
-    border: none;
-    font-size: 17px;
-    text-align: right;
-    background-color: white;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+  height: 48px;
+  padding-right: 75px;
+  padding-left: 100px;
+  border: none;
+  font-size: 17px;
+  text-align: right;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 #search-post-input button {
-    height: 50px;
-    padding-right: 25px;
-    border: none;
-    color: gray;
-    background-color: white;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
+  height: 50px;
+  padding-right: 25px;
+  border: none;
+  color: gray;
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 #search-icon {
-    font-size: 45px;
+  font-size: 45px;
 }
 
 #create-post-btn {
-    justify-self: center;
+  justify-self: center;
 }
 
 #create-post-btn button {
-    font-size: 22px;
-    border-radius: 25px;
-    padding: 15px 30px 15px 30px;
-    margin: 30px;
-    color: white;
-    background-color: blue;
+  font-size: 22px;
+  border-radius: 25px;
+  padding: 15px 30px 15px 30px;
+  margin: 30px;
+  color: white;
+  background-color: blue;
 }
 
 .recent-questions {
-    margin-top: 25px;
-    margin-left: 70px;
+  margin-top: 25px;
+  margin-left: 70px;
 }
 
 .recent-questions h2 {
-    font-size: 35px;
-    margin-bottom: 0px;
+  font-size: 35px;
+  margin-bottom: 0px;
 }
 
 #subpost-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .subpost {
-    display: flex;
-    margin: 10px;
-    width: 25em;
-    background-color: white;
-    border-radius: 15px;
+  display: flex;
+  margin: 10px;
+  width: 25em;
+  background-color: white;
+  border-radius: 15px;
 }
 
 .subpost-content {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .subpost-content h3 {
-    margin: 0;
+  margin: 0;
 }
 
 .help-icon {
-    align-content: center;
-    padding-left: 15px;
-    color: gray;
+  align-content: center;
+  padding-left: 15px;
+  color: gray;
 }
