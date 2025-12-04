@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d6d6d6;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+img[id="navlogo"] {
+  width: 100px;
+  height: 70px;
+  margin-left: 50px;
+}
+
+p[id="title"] {
+  font-size: 30px;
+  margin-left: 64px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  border-right: 1px solid black;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+ul li:first-child {
+  padding-left: 0;
+}
+
+ul li:nth-child(3){
+  border-right: none;
+  padding-right: 0;
+}
+
+ul li:last-child{
+  border-right: none;
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+}
+
+input[name="search"]{
+  width: 75px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid rgb(65, 65, 65);
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+input[name="search"]:focus{
+  width: 600px;
+}
+
+/* Main Content */
+
+
+
+
+/* Footer */
+
+footer {
+  top: 100px;
+  background-color: #ffffff;
+  position: relative;
+  text-align: center;
+  height: 50px;
+}
+
+footer p {
+  padding-top: 15px;
+}
