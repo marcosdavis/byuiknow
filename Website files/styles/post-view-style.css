@@ -49,9 +49,24 @@ ul li:first-child {
   padding-left: 0;
 }
 
-ul li:last-child {
+ul li:last-child{
   border-right: none;
-  padding-right: 0;
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+}
+
+input[name="search"]{
+  width: 75px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid rgb(65, 65, 65);
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+input[name="search"]:focus{
+  width: 600px;
 }
 
 /*main body css */
