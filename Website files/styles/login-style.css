@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #d6d6d6;
+  background-color: white;
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -9,11 +9,12 @@ body {
 /* Nav bar style */
 
 nav {
-  background-color: white;
+  background-color: #3464c2;
   width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
+  border-bottom: 3px solid #ff924d;
 }
 
 img[id="navlogo"] {
@@ -49,9 +50,29 @@ ul li:first-child {
   padding-left: 0;
 }
 
-ul li:last-child {
+ul li:nth-child(3){
   border-right: none;
   padding-right: 0;
+}
+
+ul li:last-child{
+  border-right: none;
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+}
+
+input[name="search"]{
+  width: 75px;
+  height: 40px;
+  border-radius: 15px;
+  border: 1px solid rgb(65, 65, 65);
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+input[name="search"]:focus{
+  width: 600px;
 }
 
 /* Login panel design */
@@ -59,10 +80,11 @@ ul li:last-child {
 .login-panel {
     width: 25em;
     height: 25em;
-    background-color: white;
+    background-color: #eaeaea;
     justify-self: center;
     text-align: center;
     border-radius: 5em;
+    box-shadow: 0px 5px 5px 0px #000000;
 }
 
 .login-panel h1 {
@@ -92,7 +114,7 @@ ul li:last-child {
 
 footer{
   top:100px;
-  background-color: #ffffff;
+  background-color: #3464c2;
   position:relative;
   text-align: center;
   height: 50px;
