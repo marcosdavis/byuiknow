@@ -6,7 +6,7 @@ async function loadPosts() {
         // const posts = await response.json();
         // displayPosts(posts);
         
-        // load real data but use dymy data for now 
+        // load real data but use dummy data for now 
         const dummyPosts = [
             {
                 id: 1,
