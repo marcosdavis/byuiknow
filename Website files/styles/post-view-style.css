@@ -56,6 +56,40 @@ ul li:last-child {
 
 /*main body css */
 
+.user-bar img, .post-content img, .comment img {
+  width: 4em;
+}
+
+.user-bar {
+  margin: 2em 5em 0 5em;
+  display: flex;
+}
+
+.user-bar img {
+  margin-right: 2em;
+}
+
+.post-content {
+  margin: 2em 5em 0 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+}
+
+#post-title {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.post-content img {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.post-content p {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
 /* Footer css */
 
 footer{
