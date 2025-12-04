@@ -90,6 +90,23 @@ ul li:last-child {
   cursor: pointer;
 }
 
+#searchbar-container button {
+  height: 36px;
+  padding-right: 25px;
+  border: none;
+  color: gray;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+}
+
+#search-icon {
+  font-size: 35px;
+}
+
+#searchbar-container button:hover {
+  cursor: pointer;
+}
+
 .bar {
   margin: 0 8px;        
   font-weight: bold;    

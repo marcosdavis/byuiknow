@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Post - BYUI-Know</title>
-    <link rel="stylesheet" href="styles/post-style.css">
+    <title>Post Title - BYUI-KNOW</title>
+    <link rel="stylesheet" href="styles/post.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -15,9 +16,117 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="results.html">Posts</a></li>
                 <li><a href="index.html">Settings</a></li>
+                <li><input type="text" name="search" placeholder="Search..."></li>
             </ul>
         </nav>
     </header>
-    
+    <main>
+        <div class="post-container">
+            <div class="post-header">
+                <h1 class="post-title">How to use a printer on campus</h1>
+                <div class="post-meta">
+                    <span class="author">Posted by: <strong>First Last</strong></span>
+                    <span class="date">Dec 4 2025</span>
+                    <span class="views">999999 views</span>
+                </div>
+                <div class="post-tags">
+                    <!-- put all the tags repalce whn tags are loaded -->
+                    <span class="tag">#Printer</span>
+                    <span class="tag">#Tutorial</span>
+                    <span class="tag">#Campus</span>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <div class="post-content">
+                <div class="post-image">
+                    <img src="images/placeholder.png" alt="Post Image">
+                </div>
+                <div class="post-body">
+                    <p>This is where the main content of the post</p>
+                    <p>fasjdfl;a s.</p>
+                    <p>jlavdhfs</p>
+                </div>
+            </div>
+
+            <!-- Post Actions -->
+            <!-- https://developers.google.com/fonts/docs/material_icons -->
+            <div class="post-actions">
+                <button class="action-btn like-btn">
+                    <span class="material-icons">thumb_up</span>
+                    <span>Like 9999999999</span>
+                </button>
+                <button class="action-btn share-btn">
+                    <span class="material-icons">share</span>
+                    <span>Share</span>
+                </button>
+                <button class="action-btn bookmark-btn">
+                    <span class="material-icons">bookmark_border</span>
+                    <span>Save</span>
+                </button>
+            </div>
+
+            <!-- Comments -->
+            <div class="comments-section">
+                <h2>Comments (3)</h2>
+                
+                <!-- Comment Form -->
+                <div class="comment-form">
+                    <textarea id="comment-input" placeholder="Add a comment..." rows="4"></textarea>
+                    <button class="submit-comment-btn">Post Comment</button>
+                </div>
+
+                <!-- Existing Comments -->
+                <div class="comments-list">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">Person 1</span>
+                            <span class="comment-date">Time ago </span>
+                        </div>
+                        <p class="comment-text">This is really cool</p>
+                        <div class="comment-actions">
+                            <button class="comment-like">
+                                <span class="material-icons">thumb_up</span>
+                                <span>999999</span>
+                            </button>
+                            <button class="comment-reply">Reply</button>
+                        </div>
+                    </div>
+
+            <!-- Related Posts -->
+            <div class="related-posts">
+                <h2>Related Posts</h2>
+                <div class="related-posts-grid">
+                    <div class="related-post-card">
+                        <img src="images/placeholder.png" alt="Related Post">
+                        <h3> scan documents</h3>
+                        <p>how to scan documents</p>
+                        <span class="tag">#Scanner</span>
+                    </div>
+                    <div class="related-post-card">
+                        <img src="images/placeholder.png" alt="Related Post">
+                        <h3>computer labs</h3>
+                        <p>stuff about compteur labs</p>
+                        <span class="tag">#Campus</span>
+                    </div>
+                    <div class="related-post-card">
+                        <img src="images/placeholder.png" alt="Related Post">
+                        <h3>priting </h3>
+                        <p>print ifromation</p>
+                        <span class="tag">#Mobile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; BYUI-KNOW</p>
+    </footer>
+    <script src="JS files/post-view.js"></script>
+    <main>
+    </main>
+    <footer>
+        <p>Copyright &copy; BYUI-KNOW</p>
+    </footer>
 </body>
 </html>
