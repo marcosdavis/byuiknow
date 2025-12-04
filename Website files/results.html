@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles/results-style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"/>
   </head>
   <body>
     <header>
         <nav>
-            <img id="navlogo" src="images/placeholder.png" alt="Placeholder Image">
+            <img id="navlogo" src="images/BYUI-KNOW logo.png" alt="Website logo">
             <p id="title">BYUI-KNOW</p>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,23 +19,26 @@
             </ul>
         </nav>
     </header>
-
     <main>
-      <input class="search-bar" type="text" placeholder="Seacrh BYUI-KNOW" />
-
-      <select id="multi-select">
-        <option value="">filter by tag</option>
-        <span class="bar">|</span>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-      </select>
-      <select id="multi-select">
-        <option value="">Sort Newest</option>
-        <option value="">Sort Oldest</option>
-        <option value="" >Sort Popular</option>
-        <option value="" >Sort old-fashion</option>
-      </select>
+      <div id="searchbar-container">
+        <input class="search-bar" type="text" placeholder="Seacrh BYUI-KNOW" name="search_input"/>
+        <button><span class="material-symbols-outlined" id="search-icon">search</span></button> 
+      </div>
+      <section id="dropdown-sorters">
+        <select class="multi-select tag" name="tags">
+          <option value="">filter by tag</option>
+          <span class="bar">|</span>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <select class="multi-select sort" name="sort">
+          <option value="">Sort Newest</option>
+          <option value="">Sort Oldest</option>
+          <option value="" >Sort Popular</option>
+          <option value="" >Sort old-fashion</option>
+        </select>
+      </section>
       <section class="post-section">
         <div class="box1">
           <h4>Title</h4>

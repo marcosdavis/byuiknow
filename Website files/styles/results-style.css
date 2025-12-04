@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #d6d6d6;
+  background-color: #fff6c5;
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -12,6 +12,7 @@ nav {
   height: 100px;
   display: flex;
   align-items: center;
+  background-color: #5cbde5;
 }
 
 img[id="navlogo"] {
@@ -53,16 +54,40 @@ ul li:last-child {
   padding-right: 0;
 }
 
+#searchbar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+
 .search-bar{
-    width: 1200px;          
-    height: 35px;          
-    position: relative;
-    left:125px;
-    top:20px;
+    width: 85%;          
+    height: 36px;          
+    text-align: center;
+    right: 0;
+    top: 0;
     padding: 0 10px;       
-    border: 1px solid #ccc; 
-    border-radius: 8px;    
+    border: none; 
+    border-radius: 8px 0 0 8px;    
     font-size: 16px;
+    background-color: #dedede;
+}
+
+#searchbar-container button {
+  height: 36px;
+  padding-right: 25px;
+  border: none;
+  color: gray;
+  background-color: white;
+  border-radius: 0 8px 8px 0;
+}
+
+#search-icon {
+  font-size: 35px;
+}
+
+#searchbar-container button:hover {
+  cursor: pointer;
 }
 
 .bar {
@@ -73,13 +98,17 @@ ul li:last-child {
   left: 0px;            
 }
 
+#dropdown-sorters {
+  display: flex;
+  margin-top: 2em;
+  margin-left: 8em;
+  justify-content: left;
+}
 
-#multi-select{
-  width: 100px;
-  position:relative;
-  top:60px;
-  right:70%;
-  border-radius: 5px;
+.multi-select{
+  margin-left: 2em;
+  padding: 7px;
+  border-radius: 10px;
 }
 
 input{
@@ -96,6 +125,7 @@ input{
     gap: 10px;
     justify-content: center;
     align-content: center;
+    
 }
 .post-section div {
     width:50%;
@@ -104,6 +134,7 @@ input{
     background: #f9f9f9;
     margin:0 auto;
     min-height: 300px; 
+    background-color: #ff924d;
 }
 
 .post-section img {
@@ -150,11 +181,13 @@ input{
     display: inline-block;
     margin-left: 10px;
     margin-top: 10px;
+    
+    
 }
 
 footer{
   top:100px;
-  background-color: #ffffff;
+  background-color: #5cbde5;
   position:relative;
   text-align: center;
   height: 50px;
