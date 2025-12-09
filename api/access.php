@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 // Example query
-$sql = "SELECT * FROM test";
+$sql = "SELECT * FROM question";
 $result = $conn->query($sql);
 
 $data = [];
