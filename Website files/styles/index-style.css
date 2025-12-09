@@ -16,8 +16,10 @@ nav {
 
 img[id="navlogo"] {
   width: 100px;
-  height: 70px;
+  height: 65px;
   margin-left: 50px;
+  object-fit: cover;
+  border-radius: 40px;
 }
 
 p[id="title"] {

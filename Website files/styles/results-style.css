@@ -16,10 +16,11 @@ nav {
 }
 
 img[id="navlogo"] {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 65px;
   margin-left: 50px;
-  border-radius: 100%;
+  object-fit: cover;
+  border-radius: 40px;
 }
 
 p[id="title"] {
@@ -155,14 +156,14 @@ input{
 }
 
 .post-section img {
-    width: 100%;
+    width: 90%;
     height: 180px; 
     background-color: #ddd; 
     object-fit: cover; 
     border-radius: 6px;
     display: block;
     margin-top: 15px;
-
+    justify-self: center;
   
 }
 
