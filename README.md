@@ -14,6 +14,5 @@ BYUI-KNOW is a web application for posting and browsing questions.
 
 3. **Run**  
    - Place the project folder in your web server root
-.    For example you can use htdocs for XAMPP
-   - Start Apache and MySQL  
+.    For example you can use htdocs for XAMPP (in this case start start Apache and MySQL)
    - Access the app: `http://localhost/byuiknow/index.html`
