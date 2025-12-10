@@ -7,7 +7,7 @@ BYUI-KNOW is a web application for posting and browsing questions.
 ## Setup
 
 1. **Database**  
-   - Forward engineer the db in `/Database test files` as `my_byuiknow`
+   - Forward engineer the db in `/Database test files`
 
 2. **Configuration**  
    - Edit `config.php` to point to your database 
