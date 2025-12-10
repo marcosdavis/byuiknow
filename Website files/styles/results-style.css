@@ -2,17 +2,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff6c5;
-  margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 nav {
-  background-color: white;
+  background-color: #5cbde5;
   width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
-  background-color: #5cbde5;
 }
 
 img[id="navlogo"] {
@@ -32,12 +30,13 @@ ul {
   list-style-type: none;
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 ul li {
   border-right: 1px solid black;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 0 25px;
   font-size: 20px;
 }
 
@@ -46,14 +45,8 @@ ul li a {
   color: black;
 }
 
-ul li:first-child {
-  padding-left: 0;
-}
-
-ul li:last-child {
-  border-right: none;
-  padding-right: 0;
-}
+ul li:first-child { padding-left: 0; }
+ul li:last-child { border-right: none; padding-right: 0; }
 
 #searchbar-container {
   display: flex;
@@ -61,156 +54,102 @@ ul li:last-child {
   margin-top: 3em;
 }
 
-.search-bar{
-    width: 85%;          
-    height: 36px;          
-    text-align: center;
-    right: 0;
-    top: 0;
-    padding: 0 10px;       
-    border: none; 
-    border-radius: 8px 0 0 8px;    
-    font-size: 16px;
-    background-color: #dedede;
+.search-bar {
+  width: 85%;          
+  height: 36px;          
+  text-align: center;
+  padding: 0 10px;       
+  border: none; 
+  border-radius: 8px 0 0 8px;    
+  font-size: 16px;
+  background-color: #dedede;
 }
 
 #searchbar-container button {
   height: 36px;
-  padding-right: 25px;
   border: none;
   color: gray;
   background-color: white;
   border-radius: 0 8px 8px 0;
-}
-
-#search-icon {
-  font-size: 35px;
-}
-
-#searchbar-container button:hover {
   cursor: pointer;
-}
-
-#searchbar-container button {
-  height: 36px;
-  padding-right: 25px;
-  border: none;
-  color: gray;
-  background-color: white;
-  border-radius: 0 8px 8px 0;
-}
-
-#search-icon {
-  font-size: 35px;
-}
-
-#searchbar-container button:hover {
-  cursor: pointer;
-}
-
-.bar {
-  margin: 0 8px;        
-  font-weight: bold;    
-  position: relative;   
-  top: 0px;             
-  left: 0px;            
 }
 
 #dropdown-sorters {
   display: flex;
   margin-top: 2em;
   margin-left: 8em;
-  justify-content: left;
 }
 
-.multi-select{
+.multi-select {
   margin-left: 2em;
   padding: 7px;
   border-radius: 10px;
 }
 
-input{
-  position:relative;
-  top:60px;
-  right:70%;
-  border-radius: 5px;
-}
-  .post-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    margin-top:100px;
-    gap: 10px;
-    justify-content: center;
-    align-content: center;
-    
-}
-.post-section div {
-    width:50%;
-    border: 1px solid #ccc;
-    padding: 0px;
-    background: #f9f9f9;
-    margin:0 auto;
-    min-height: 300px; 
-    background-color: #ff924d;
+/*post grid  */
+.post-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-.post-section img {
-    width: 90%;
-    height: 180px; 
-    background-color: #ddd; 
-    object-fit: cover; 
-    border-radius: 6px;
-    display: block;
-    margin-top: 15px;
-    justify-self: center;
-  
+.post-card {
+  background-color: #ff924d;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
 }
 
-.box1 {
-    position: relative; 
-    left: 100px;
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.box3{
-  position: relative; 
-  right: 100px;
+.post-card h4 {
+  margin: 10px;
+  font-size: 1.2em;
 }
 
-.box6{
-  position: relative; 
-  right: 100px;
+.post-card p {
+  margin: 5px 10px;
 }
 
-.box4 {
-    position: relative; 
-    left: 100px;
+.post-card .tags {
+  margin: 10px;
 }
 
-
-.description {
-    display: block;
-    position: relative;
-    margin-top: 20px;
-    left:10px;
+.post-card .tags span {
+  background-color: rgba(255,255,255,0.3);
+  padding: 2px 6px;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
 }
 
-.post-section span {
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: 10px;
-    
-    
+.post-card .share-tag {
+  margin: 10px;
+  align-self: flex-end;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-footer{
-  top:100px;
+.post-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+footer {
+  top: 100px;
   background-color: #5cbde5;
-  position:relative;
+  position: relative;
   text-align: center;
   height: 50px;
 }
 
-footer p{
-  padding-top:15px;
+footer p {
+  padding-top: 15px;
 }
