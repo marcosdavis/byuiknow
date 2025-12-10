@@ -1,52 +1,63 @@
-// set up variables to reference different elements on the page
-const backBtn = document.getElementById("back-btn");
-const nextBtn = document.getElementById("next-btn");
-const postArray = Array.from(document.querySelectorAll(".posts"));
-const position = ["post-1", "post-2", "post-3"];
+const carouselContainer = document.getElementById('carousel-container');
+const nextBtn = document.getElementById('next-btn');
+const backBtn = document.getElementById('back-btn');
 
-// Get the top 3 trending posts
-// const trendingPosts = fetch("api/trending.php")
-//   .then(result => result.json)
-//   .then(err => console.log(err));
+let postArray = [];
+let position = ['post-1', 'post-2', 'post-3'];
+let currentIndex = 0;
 
-// console.log(trendingPosts)
+async function loadTrendingPosts() {
+    try {
+        const response = await fetch('../api/trending.php');
+        const posts = await response.json();
 
-// Test posts
-carouselPosts = [
-  {
-    'id': '1',
-    'title': 'Post title1',
-    'description': 'post content'
-  },
-  {
-    'id': '2',
-    'title': 'Post title2',
-    'description': 'post content'
-  },
-  {
-    'id': '3',
-    'title': 'Post title3',
-    'description': 'post content'
-  },
-];
+        if (!posts || posts.length === 0) {
+            carouselContainer.innerHTML = '<p>No trending posts available.</p>';
+            return;
+        }
 
-// When the back button is pressed. move the left post to the right side of the center post
-backBtn.addEventListener("click", () => {
-  postArray.unshift(postArray.pop());
-  updateClasses();
-});
+        carouselContainer.innerHTML = '';
 
-// When the next button is pressed. move the right post to the left side of the center post
-nextBtn.addEventListener("click", () => {
-  postArray.push(postArray.shift());
-  updateClasses();
-});
+        posts.slice(0, 3).forEach((post, index) => {
+            const postDiv = document.createElement('div');
+            postDiv.className = 'posts ' + position[index];
+            postDiv.dataset.postId = post.question_id;
 
-// Update the class names for the new orientation of the posts so that the css can update them.
-function updateClasses() {
-  postArray.forEach((post, i) => {
-    post.className = "posts " + position[i];
-  })
+            postDiv.innerHTML = `
+                <h2>${post.title}</h2>
+                <p>${post.question_content}</p>
+                <small>by ${post.username}</small>
+                <div class="tags">${post.tags.map(tag => `<span class="tag">#${tag}</span>`).join(' ')}</div>
+            `;
+
+            carouselContainer.appendChild(postDiv);
+        });
+
+        postArray = Array.from(carouselContainer.querySelectorAll('.posts'));
+    } catch (err) {
+        console.error('Failed to load posts:', err);
+        carouselContainer.innerHTML = '<p>Failed to load posts.</p>';
+    }
 }
 
+function showNextPost() {
+    if (!postArray.length) return;
+    postArray.push(postArray.shift());
+    updatePositions();
+}
 
+function showPrevPost() {
+    if (!postArray.length) return;
+    postArray.unshift(postArray.pop());
+    updatePositions();
+}
+
+function updatePositions() {
+    postArray.forEach((post, index) => {
+        post.className = 'posts ' + position[index];
+    });
+}
+nextBtn.addEventListener('click', showNextPost);
+backBtn.addEventListener('click', showPrevPost);
+
+loadTrendingPosts();
