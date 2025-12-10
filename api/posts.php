@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json; charset=UTF-8");
-require_once "config.php"; // make sure path is correct
+require_once "config.php"; 
 
 $sql = "
     SELECT q.question_id, q.title, q.question_content, u.username,
