@@ -11,5 +11,5 @@ function access() {
 const searchBtn = document.getElementById("search-btn");
 
 searchBtn.addEventListener("click", async () => {
-    access();
+    window.location.href = "results.html"
 })

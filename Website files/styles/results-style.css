@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff6c5;
+  margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -30,13 +31,12 @@ ul {
   list-style-type: none;
   display: flex;
   align-items: center;
-  margin-left: auto;
-  margin-right: 50px;
 }
 
 ul li {
   border-right: 1px solid black;
-  padding: 0 25px;
+  padding-right: 25px;
+  padding-left: 25px;
   font-size: 20px;
 }
 
@@ -45,8 +45,14 @@ ul li a {
   color: black;
 }
 
-ul li:first-child { padding-left: 0; }
-ul li:last-child { border-right: none; padding-right: 0; }
+ul li:first-child {
+  padding-left: 0;
+}
+
+ul li:last-child {
+  border-right: none;
+  padding-right: 0;
+}
 
 #searchbar-container {
   display: flex;
@@ -62,7 +68,7 @@ ul li:last-child { border-right: none; padding-right: 0; }
   border: none; 
   border-radius: 8px 0 0 8px;    
   font-size: 16px;
-  background-color: #dedede;
+  background-color: white;
 }
 
 #searchbar-container button {
@@ -91,7 +97,7 @@ ul li:last-child { border-right: none; padding-right: 0; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 5em;
 }
 
 .post-card {

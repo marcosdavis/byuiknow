@@ -1,13 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #e2f3fd;
+  background-color: #fff6c5;
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 nav {
-  background-color: #3464c2;
+  background-color: #5cbde5;
   width: 100%;
   height: 100px;
   display: flex;
@@ -90,6 +90,10 @@ ul li:last-child {
   background-color: lightgray;
   transition: all 0.4s ease-in-out;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.671);
+  background-color: #ff924d;
+}
+.posts div {
+	text-align: center;
 }
 
 .post-1 {
@@ -112,6 +116,14 @@ ul li:last-child {
   height: 175px;
   left: 80%;
   transform: translate(-50%, -50%) scale(1);
+}
+
+.post-1 h2, .post-3 h2{
+	font-size: 1.15em;
+}
+
+.post-1 p, .post-1 small, .post-3 p, .post-3 small, .tags{
+	font-size: 0.85em;
 }
 
 #back-container {
@@ -253,7 +265,7 @@ ul li:last-child {
 
 footer{
   top:100px;
-  background-color: #3464c2;
+  background-color: #5cbde5;
   position:relative;
   text-align: center;
   height: 50px;

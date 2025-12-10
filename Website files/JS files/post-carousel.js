@@ -26,7 +26,7 @@ async function loadTrendingPosts() {
             postDiv.innerHTML = `
                 <h2>${post.title}</h2>
                 <p>${post.question_content}</p>
-                <small>by ${post.username}</small>
+                <div>by ${post.username}</div>
                 <div class="tags">${post.tags.map(tag => `<span class="tag">#${tag}</span>`).join(' ')}</div>
             `;
 
