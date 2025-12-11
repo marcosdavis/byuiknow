@@ -1,12 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #d6d6d6;
+  background-color: #fff6c5;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
-  background-color: white;
+  background-color: #5cbde5;
   width: 100%;
   height: 100px;
   display: flex;
@@ -357,14 +360,10 @@ input[name="search"]:focus{
 
 footer {
   top: 100px;
-  background-color: #ffffff;
+  background-color: #5cbde5;
   position: relative;
   text-align: center;
   height: 50px;
-}
-
-footer p {
-  padding-top: 15px;
 }
 
 @media (max-width: 768px) {
